@@ -1,8 +1,32 @@
 /* Header */
+#preloader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10001;
+    background:black;
+}
+#preloader p{
+    font:400 4em T;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: #f9f1e9;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    text-shadow: 6px 4px 4px rgba(255,255,255,.5);
+    animation:fadeOut 2s linear infinite alternate;
+    transition: all 0.4s ease-in-out;
+}
+.preloader{
+    animation: fadeOut 2s linear;
+}
 .large-header {
   position: relative;
   width: 100%;
-  background: rgba(0,0,0,1);
+  background: black;
   overflow: hidden;
   background-size: cover;
   background-position: center center;
@@ -21,10 +45,8 @@
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   text-shadow: 8px 6px 6px rgba(255,255,255,.7);
-  animation-name: fadeIn;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    transition: all 0.4s ease-in-out;
+  animation:fadeIn 3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 @keyframes fadeIn {
   0% {
@@ -37,10 +59,19 @@
     opacity: 1;
   }
 }
-.main-title:hover{
-    text-shadow: 8px 6px 6px rgba(255,255,255,.5);
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
-.demo-1 .main-title {
+.main-title:hover{
+  text-shadow: 8px 6px 6px rgba(255,255,255,.5);
+}
+.my-1 .main-title {
   text-transform: uppercase;
   font-size: 4.2em;
   letter-spacing: 0.1em;
@@ -49,7 +80,12 @@
   font-weight: 400;
 }
 @media only screen and (max-width: 768px) {
-  .demo-1 .main-title {
+  .my-1 .main-title {
+    font-size: 3em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #preloader p {
     font-size: 3em;
   }
 }
