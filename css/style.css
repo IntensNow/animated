@@ -21,7 +21,7 @@
     transition: all 0.4s ease-in-out;
 }
 .preloader{
-    animation: fadeOut 2s linear;
+    animation: fadeOut 3s linear;
 }
 .large-header {
   position: relative;
@@ -60,11 +60,13 @@
   }
 }
 @keyframes fadeOut {
-  from {
+  0% {
     opacity: 1;
   }
-
-  to {
+  66%{
+      opacity:0;
+  }
+  100% {
     opacity: 0;
   }
 }
