@@ -9,7 +9,7 @@
   z-index: 1;
 }
 #large-header {
-  background:black;
+  background-image: url(../images/headerTheme.jpg);
 }
 .main-title {
   position: absolute;
@@ -17,11 +17,28 @@
   padding: 0;
   color: #f9f1e9;
   text-align: center;
-  top: 50%;
+  top: 20%;
   left: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
-    text-shadow: 10px 10px 10px rgba(255,255,255,1);
+  text-shadow: 8px 6px 6px rgba(255,255,255,.7);
+  animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  12.5% {
+    opacity:0;   
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main-title:hover{
+    text-shadow: 8px 6px 6px rgba(255,255,255,.5);
 }
 .demo-1 .main-title {
   text-transform: uppercase;
