@@ -1,7 +1,9 @@
-window.onload = function(){
-  var preloader = document.getElementById("preloader")
-  preloader.classList.add("preloader");
+$(document).ready(function() {
+    /*    preloader    */
+    $('#preloader').addClass('preloader');
   setTimeout(function(){
-      preloader.style.display = "none";
-  },3000);
-};
+      $('#preloader').css('display','none');
+  },3000); 
+    /*Fullpage initialization*/
+    $('#fullpage').fullpage();
+});

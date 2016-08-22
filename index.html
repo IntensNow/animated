@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <title>Animated Background</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fullpage/jquery.fullPage.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div id="preloader">
         <p>Loading</p>
     </div>
-    <header id="large-header" class="large-header">
-        <canvas id="my-canvas"></canvas>
-        <h1 class="main-title">Wellcome to <span class="thin">IntensNow</span><br>blog</h1>
-    </header>
+    <div id="fullpage">
+        <div class="section">
+            <header id="large-header" class="large-header">
+                <canvas id="my-canvas"></canvas>
+                <h1 class="main-title">Wellcome to <span class="thin">IntensNow</span><br>blog</h1>
+            </header>
+       </div>
+        <div class="section">2222</div>
+        <div class="section">3333</div>
+        <div class="section">4444</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="fullpage/jquery.fullPage.min.js"></script>
     <script src='js/preloader.js'></script>
     <script src='js/animate.min.js'></script>
     <script src='js/animatedHeader.js'></script>

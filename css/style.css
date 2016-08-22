@@ -24,29 +24,27 @@
     animation: fadeOut 3s linear;
 }
 .large-header {
-  position: relative;
-  width: 100%;
-  background: black;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center center;
-  z-index: 1;
+    position: relative;
+    width: 100%;
+    background-image: url(../images/headerTheme.jpg);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
 }
-#large-header {
-  background-image: url(../images/headerTheme.jpg);
-}
+
 .main-title {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  color: #f9f1e9;
-  text-align: center;
-  top: 20%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  text-shadow: 8px 6px 6px rgba(255,255,255,.7);
-  animation:fadeIn 3s ease-in-out;
-  transition: all 0.4s ease-in-out;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: #f9f1e9;
+    text-align: center;
+    top: 20%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    text-shadow: 8px 6px 6px rgba(255,255,255,.7);
+    animation:fadeIn 3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 @keyframes fadeIn {
   0% {
@@ -63,30 +61,43 @@
   0% {
     opacity: 1;
   }
-  66%{
-      opacity:0;
-  }
+  66% {
+    opacity: 0;
+    }
   100% {
     opacity: 0;
   }
 }
 .main-title:hover{
-  text-shadow: 8px 6px 6px rgba(255,255,255,.5);
+    text-shadow: 8px 6px 6px rgba(255,255,255,.5);
 }
 .my-1 .main-title {
-  text-transform: uppercase;
-  font-size: 4.2em;
-  letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 4.2em;
+    letter-spacing: 0.1em;
 }
 .main-title .thin {
-  font-weight: 400;
+    font-weight: 400;
+}
+.section:nth-child(2){
+    background-image: url(/images/railways.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.section:nth-child(3){
+    background-image: url(/images/railways.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.section:nth-child(4){
+    background-image: background-image: url(/images/railways.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 @media only screen and (max-width: 768px) {
   .my-1 .main-title {
     font-size: 3em;
   }
-}
-@media only screen and (max-width: 768px) {
   #preloader p {
     font-size: 3em;
   }
