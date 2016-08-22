@@ -6,19 +6,40 @@
     z-index: 10001;
     background:black;
 }
-#preloader p{
-    font:400 4em T;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    color: #f9f1e9;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    text-shadow: 6px 4px 4px rgba(255,255,255,.5);
-    animation:fadeOut 2s linear infinite alternate;
-    transition: all 0.4s ease-in-out;
+#preloader div{
+    position:relative;
+    top:calc(50% - 25px);
+}
+.ball {
+    background-color: rgba(0,0,0,0);
+    border:5px solid rgba(0,183,229,0.9);
+    opacity:.9;
+    border-top:5px solid rgba(0,0,0,0);
+    border-left:5px solid rgba(0,0,0,0);
+    border-radius:50px;
+    box-shadow: 0 0 35px #9fbedb;
+    width:50px;
+    height:50px;
+    margin:0 auto;
+    position: relative;
+    top:30px;
+    animation:spin .5s infinite linear;
+}
+@-moz-keyframes spin {
+    0% { -moz-transform:rotate(0deg); }
+    100% { -moz-transform:rotate(360deg); }
+}
+@-moz-keyframes spinoff {
+    0% { -moz-transform:rotate(0deg); }
+    100% { -moz-transform:rotate(-360deg); }
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform:rotate(0deg); }
+    100% { -webkit-transform:rotate(360deg); }
+}
+@-webkit-keyframes spinoff {
+    0% { -webkit-transform:rotate(0deg); }
+    100% { -webkit-transform:rotate(-360deg); }
 }
 .preloader{
     animation: fadeOut 3s linear;
@@ -26,23 +47,22 @@
 .large-header {
     position: relative;
     width: 100%;
-    background-image: url(../images/headerTheme.jpg);
+    background-image: url(../images/1.jpg);
     overflow: hidden;
     background-size: cover;
     background-position: center center;
     z-index: 1;
 }
-
 .main-title {
     position: absolute;
     margin: 0;
     padding: 0;
-    color: #f9f1e9;
+    color: rgba(0, 0, 0, 0.65);
     text-align: center;
     top: 20%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
-    text-shadow: 8px 6px 6px rgba(255,255,255,.7);
+    text-shadow: 6px 4px 4px rgba(0, 0, 0, 0.51);
     animation:fadeIn 3s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
@@ -69,7 +89,7 @@
   }
 }
 .main-title:hover{
-    text-shadow: 8px 6px 6px rgba(255,255,255,.5);
+    text-shadow: 7px 4px 4px rgba(0, 0, 0, 0.43);
 }
 .my-1 .main-title {
     text-transform: uppercase;
@@ -80,17 +100,17 @@
     font-weight: 400;
 }
 .section:nth-child(2){
-    background-image: url(/images/railways.jpg);
+    background-image: url(/images/2.jpg);
     background-size: cover;
     background-position: center center;
 }
 .section:nth-child(3){
-    background-image: url(/images/railways.jpg);
+    background-image: url(/images/3.jpg);
     background-size: cover;
     background-position: center center;
 }
 .section:nth-child(4){
-    background-image: background-image: url(/images/railways.jpg);
+    background-image: url(/images/4.jpg);
     background-size: cover;
     background-position: center center;
 }

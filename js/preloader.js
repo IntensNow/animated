@@ -1,9 +1,11 @@
 $(document).ready(function() {
     /*    preloader    */
-    $('#preloader').addClass('preloader');
   setTimeout(function(){
-      $('#preloader').css('display','none');
-  },3000); 
+      $('#preloader').addClass('preloader');
+       setTimeout(function(){
+           $('#preloader').css('display','none');
+       },3000); 
+  },1000); 
     /*Fullpage initialization*/
     $('#fullpage').fullpage();
 });
