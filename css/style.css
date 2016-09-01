@@ -44,7 +44,8 @@
 .preloader{
     animation: fadeOut 3s linear;
 }
-.about_me{
+.see_more{
+    visibility: hidden;
     position: absolute;
     bottom:7.5rem;
     left:calc(50% - 90px);
@@ -58,13 +59,26 @@
     transition: background 2s linear;
     box-shadow: 6px 6px 10px;
 }
-.about_me:hover{
+.see_more:hover{
     bottom:7.45rem;
     background:radial-gradient(100% 40%,rgba(6, 201, 118, 0.77),rgba(16, 95, 46, 0.82));
 }
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
 .scroll_up{
     position: absolute;
-    top:3rem;
+    top:1.5rem;
     left:calc(50% - 60px);
     transition: background 1s linear;
     box-shadow: 6px 6px 10px;
@@ -74,7 +88,7 @@
     border-radius: 20px;
 }
 .scroll_up:hover{
-    top:3.05rem;
+    top:1.55rem;
     background: rgba(20, 172, 54, 0.64);
 }
 .scroll_up div{
@@ -87,7 +101,7 @@
 }
 .scroll_down{
     position: absolute;
-    bottom:3rem;
+    bottom:1.5rem;
     left:calc(50% - 60px);
     transition: background 1s linear;
     box-shadow: 6px 6px 10px;
@@ -97,7 +111,7 @@
     border-radius: 20px;
 }
 .scroll_down:hover{
-    bottom:2.95rem;
+    bottom:1.45rem;
     background: rgba(20, 172, 54, 0.64);
 }
 .scroll_down div{
@@ -108,7 +122,7 @@
     border-left: 40px solid transparent;
     border-right: 40px solid transparent;
 }
-.section{
+.section {
     position: relative;
 }
 .section:nth-child(1) {
@@ -117,7 +131,8 @@
     background-position: center center;
 }
 
-.main-title {
+.main-title{
+    opacity: 0;
     position: absolute;
     margin: 0;
     padding: 0;
@@ -127,15 +142,11 @@
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     text-shadow: 6px 4px 4px rgba(0, 0, 0, 0.51);
-    animation:fadeIn 3s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
 @keyframes fadeIn {
   0% {
     opacity: 0;
-  }
-  12.5% {
-    opacity:0;   
   }
   100% {
     opacity: 1;
@@ -163,16 +174,93 @@
 .main-title .thin {
     font-weight: 400;
 }
+    /* 2nd page */
 .section:nth-child(2){
     background-image: url(/images/2.jpg);
     background-size: cover;
     background-position: center center;
 }
+#about_me, #some_tasks{
+    position: absolute;
+    top:6.5rem;
+    left:calc(50% - 250px);
+    width: 500px;
+    height: 150px;
+    background-color: linear-gradient(black,aqua);
+    text-align: center;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, rgba(216, 235, 177, 0.87) 0%,rgba(101, 118, 65, 0.94) 100%);
+    box-shadow: 10px 10px 10px black;
+}
+#about_me h2{
+    margin-top: 8px;
+}
+#about_me p{
+    padding: 0 20px;
+    font-size: 18px;
+}
+.technologies-position{
+    margin: -3em auto;
+    position: relative;
+    width: 700px;
+}
+.technologies{
+    background: linear-gradient(to bottom, rgba(216, 235, 177, 0.87) 0%,rgba(101, 118, 65, 0.94) 100%);
+    position: absolute;
+    width: 700px;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    box-shadow: 10px 10px 10px black, inset 2px 2px 5px black;
+}
+.technologies h3 {
+    font-size: 1.5em;
+    text-align: center;
+}
+.button{
+    display: inline-block;
+    margin:0 40px;
+    width:150px;
+    height: 150px;
+    background:linear-gradient(to left, rgba(0, 0, 0, 0.59) 0%, rgba(255, 255, 255, 0.74) 100%);
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 5px 3px 10px black;
+}
+.button:hover{
+    background:linear-gradient(to left, rgba(0, 0, 0, 0.59) 5%, rgba(255, 255, 255, 0.74) 100%);
+    box-shadow: 5px 5px 10px black;
+}
+.button h4{
+    position: absolute;
+    display: block;
+    width: 150px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.25em;
+}
+.button::after {
+    content:'';
+    width:150px;
+    height: 150px;
+    display: block;
+    opacity: 0.7;
+}
+.html::after{
+    background: url(http://defaulticon.com/images/icons32x32/edit.png?itok=nb2eY85A) center no-repeat;
+}
+.css::after{
+    background: url(http://defaulticon.com/images/icons32x32/brush.png?itok=mH7v08mD) center no-repeat;
+}
+.js::after{
+    background: url(http://defaulticon.com/images/icons32x32/science.png?itok=gP__Zwup) center no-repeat;
+}
+    /* 3th page */
 .section:nth-child(3){
     background-image: url(/images/3.jpg);
     background-size: cover;
     background-position: center center;
 }
+/* 4th page */
 .section:nth-child(4){
     background-image: url(/images/4.jpg);
     background-size: cover;
@@ -180,9 +268,6 @@
 }
 @media only screen and (max-width: 768px) {
   .my-1 .main-title {
-    font-size: 3em;
-  }
-  #preloader p {
     font-size: 3em;
   }
 }
